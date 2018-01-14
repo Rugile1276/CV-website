@@ -148,3 +148,8 @@ th, td {
   text-align:left;
   margin: 0 auto 20px 0;
 }
+
+/* ------------ Activity -------------*/
+.activity{
+      background-color: #e6e6e6;
+}
