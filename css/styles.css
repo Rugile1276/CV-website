@@ -20,7 +20,8 @@ h1{
 h2{
   font-size: 50px;
   margin-top: 0;
-    padding-bottom: 40px;
+  padding-bottom: 40px;
+  padding-top: 15px
 }
 h3{
   font-size: 25px;
@@ -35,36 +36,28 @@ a:hover{
   padding: 50px;
   overflow: auto;
 }
-.col-wide{
-  width: 70%;
-  float: left;
-  padding-left: 20px;
-  min-height: 140px;
-}
-.col-narrow{
-  width: 30%;
-  float: left;
-}
-.col-medium{
-  width: 33%;
-  float: left;
-  min-height: 175px;
-}
 p{
   margin: 10px;
 }
+.btn{
+  background: #dd4b39;;
+  color: white;
+  padding: 10px;
+  margin: 0;
+  text-decoration: none;
+  display: inline-block;
+  text-align: left;
+}
+.download{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 
 /* ------------ Header and footer -------------*/
-header, footer{
-  background-repeat: no-repeat;
-  text-align: center;
-  background-size: cover;
-  background-position: top;
-}
 
 /* Footer */
 footer{
-  text-align: center;
   padding-top: 50px 50px;
   background-color: #cdd0b9;
 }
@@ -72,15 +65,55 @@ footer{
   padding: 10px;
   display: inline-block;
 }
+.footer-info{
+  text-align: center;
+}
 
 /* Header */
 header{
-  background-image: url("../images/header.jpg");
+  position: relative;
+  background: url("../images/header.jpg") no-repeat top;
+  background-size: cover;
 }
+
 .col-main-info{
   text-align: center;
   background: rgba(255, 255, 255, 0.5);
   padding: 10px;
+  margin-top: 25px
+}
+
+/* Navigation  */
+nav{
+  position: fixed;
+  background: #f0eeef;
+
+}
+nav a{
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color:  #9da575;
+}
+
+/* Rewriting bootstrap nav */
+.icon-bar {
+   background-color: #9da575; !important;
+}
+ul.nav a:hover {
+   background: #e6e6e6; !important;
+   color:  #9da575;
+}
+
+.navbar .navbar-nav{
+  display: inline-block;
+  float: none;
+
+}
+.navbar .navbar-collapse{
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 /* ------------ Work Experience -------------*/
@@ -91,16 +124,6 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 260px;
-}
-
-
-.profile-img{
-  border-radius: 50%;
-}
-
-.vertical-line {
-  border-left: thick solid #f2a156;
-  padding-left: 40px;
 }
 
 /* ------------ Education -------------*/
@@ -137,11 +160,11 @@ th, td {
 
 /* ------------ Computer knowledge -------------*/
 .computer-knowledge{
-      background-image: url("../images/computer.jpeg");
-      background-size: 100%;
-      background-position: right;
-      background-repeat: no-repeat;
-      background-size: cover;
+    background-image: url("../images/computer.jpeg");
+    background-size: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .computer-knowledge hr{
   width: 60%;
@@ -152,4 +175,37 @@ th, td {
 /* ------------ Activity -------------*/
 .activity{
       background-color: #e6e6e6;
+}
+
+/* ----------- Media --------------- */
+@media (min-width: 700px) {
+  .col-wide{
+    width: 70%;
+    float: left;
+    padding-left: 20px;
+    min-height: 140px;
+  }
+  .col-narrow{
+    width: 30%;
+    float: left;
+  }
+  .col-medium{
+    width: 33%;
+    float: left;
+    min-height: 175px;
+  }
+  .vertical-line {
+    border-left: thick solid #f2a156;
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  h1{
+    font-size: 40px;
+  }
+  .computer-knowledge{
+    background-position: 87% 50%;
+  }
+
 }
