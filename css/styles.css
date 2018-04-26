@@ -193,6 +193,7 @@ th, td {
     width: 33%;
     float: left;
     min-height: 175px;
+    margin-bottom: 20px;
   }
   .vertical-line {
     border-left: thick solid #f2a156;
